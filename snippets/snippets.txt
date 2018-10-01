@@ -1,0 +1,31 @@
+// Random float [0,1]
+
+float rand(float x)
+{
+    return fract(sin(x)*1.0);
+}
+
+// Random vec2
+vec2 random2( vec2 p ) {
+    return fract(sin(vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3))))*43758.5453);
+}
+
+// Random value [0,1] every n seconds
+  
+float rand01 = rand(round(time/n));
+
+// Math defines
+#define 	pi   	3.141592653589793 	// pi
+#define 	e     	2.718281828459045 	// eulers number
+#define 	prphi	2.028876065463213	// pi root of phi
+#define 	sqpi 	1.772453850905516	// square root of pi
+#define 	thpi  	0.996272076220750	// tanh(pi)
+#define 	lgpi  	0.497149872694134 	// log(pi)  
+#define 	rcpi  	0.318309886183791	// reciprocal of pi  , 1/pi 
+
+// Rotation Matrix
+
+mat2 rotate2d(float _angle){
+    return mat2(cos(_angle),-sin(_angle),
+                sin(_angle),cos(_angle));
+}
